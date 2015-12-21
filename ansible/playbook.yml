@@ -1,0 +1,10 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    domain: playground.dev
+  tasks: 
+    - include: tasks/common.yml
+    - include: tasks/mysqldb.yml
+    - include: tasks/php.yml
+    - include: tasks/apache.yml

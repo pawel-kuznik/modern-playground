@@ -1,0 +1,13 @@
+---
+- name: Install apache
+  apt: name=apache2 state=present
+
+- file: path=/etc/apache2/sites-enabled/000-deafault.conf state=absent
+
+- template: src=virtualhost.conf.j2 dest=/etc/apache2/sites-available/{{ domain }}.conf
+
+- file: path=/var/www/{{ domain }} state=directory
+
+- command: a2ensite {{ domain }}
+
+- action: service name=apache2 state=restarted

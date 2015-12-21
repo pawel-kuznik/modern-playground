@@ -1,0 +1,12 @@
+---
+- name: install MySQL
+  apt: name={{ item }} state=latest update_cache=yes
+  with_items:
+  - mysql-server
+  - mysql-client
+  - python-mysqldb
+
+- apt: pkg=python-pip state=installed
+
+- name: add db user
+  mysql_user: name=tester password=1234 priv=*.*:ALL,GRANT state=present
