@@ -2,7 +2,7 @@
 
 This repo is my own webstack with modern (as lately released) web languages 
 (PHP7 and ES6). However lot of stuff is already done, the ansible playbook,
-gruntfile and simple vagrant config, it's a barebone. So, there is no frameworks,
+gruntfile and simple vagrant config, it's a barebone. So, there are no frameworks,
 libs or other stuff. 
 
 # Installation
@@ -20,16 +20,16 @@ apt-get install virtualbox vagrant ansible
 
 ```
 
-Windows nad Mac users are out of luck. I don't have Mac to play around and I use 
+Windows and Mac users are out of luck. I don't have a Mac to play around and I use 
 my Windows only for playing games. So no support from me.
 
 # Usage
 
-PHP7 is installed, but, there is no environment set up. So the freedom of creating
-application however you want is yours. (Still composer is really advised).
+PHP7 is installed, but there is no environment set up. So the freedom of creating
+applications however you want is yours. (Still composer is really advised).
 
-ES6 is achieved with babel.js. Whole package is using babel 6 (so also newest 
+ES6 is achieved with babel.js. Whole package is using babel 6 (so also latest 
 release) with es2015 preset. Babel is just transpiling files, it doesn't merge 
-them nor deply any module system. So, for using commonJS modules we are using 
+them nor deploy any module system. So, for using commonJS modules we are using 
 browserify that will use node.js-like module discovery and compile the whole thing
 into one es5 file. That final file can be used on a website.
